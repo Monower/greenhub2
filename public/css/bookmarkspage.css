@@ -1,0 +1,257 @@
+.bookmarkspage-container {
+  min-height: 100vh;
+}
+.bookmarkspage-bookmarkspage {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.bookmarkspage-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 107px;
+  position: absolute;
+  border-color: transparent;
+}
+.bookmarkspage-rectangle2 {
+  top: 31px;
+  left: 42px;
+  width: 405px;
+  height: 45px;
+  position: absolute;
+  border-color: transparent;
+}
+.bookmarkspage-text {
+  top: 44px;
+  left: 1001px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.bookmarkspage-vector {
+  top: 39px;
+  left: 418px;
+  width: 25px;
+  height: 30px;
+  position: absolute;
+}
+.bookmarkspage-text02 {
+  top: 38px;
+  left: 56px;
+  color: rgba(200, 200, 200, 1);
+  width: 230px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.bookmarkspage-ellipse1 {
+  top: 25px;
+  right: 21px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  border-color: transparent;
+}
+.bookmarkspage-text04 {
+  top: 43px;
+  color: rgba(255, 255, 255, 1);
+  right: 113px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.bookmarkspage-text06 {
+  top: 155px;
+  left: 443px;
+  color: rgba(0, 0, 0, 1);
+  width: 313px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+.bookmarkspage-frame1 {
+  top: 248px;
+  left: 96px;
+  width: 504px;
+  height: 87px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.bookmarkspage-rectangle6 {
+  top: 0px;
+  left: 0px;
+  width: 504px;
+  height: 87px;
+  position: absolute;
+  border-color: transparent;
+}
+.bookmarkspage-text08 {
+  top: 11px;
+  left: 16px;
+  color: rgb(0, 0, 0);
+  width: 166px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.bookmarkspage-bookmark {
+  top: 18px;
+  left: 441px;
+  width: 45px;
+  height: 50px;
+  position: absolute;
+}
+.bookmarkspage-frame2 {
+  top: 375px;
+  left: 96px;
+  width: 504px;
+  height: 87px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.bookmarkspage-rectangle61 {
+  top: 0px;
+  left: 0px;
+  width: 504px;
+  height: 87px;
+  position: absolute;
+  border-color: transparent;
+}
+.bookmarkspage-text12 {
+  top: 11px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 354px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.bookmarkspage-text13 {
+  font-weight: 700;
+}
+.bookmarkspage-bookmark1 {
+  top: 18px;
+  left: 441px;
+  width: 45px;
+  height: 50px;
+  position: absolute;
+}
+.bookmarkspage-frame3 {
+  top: 502px;
+  left: 96px;
+  width: 504px;
+  height: 87px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.bookmarkspage-rectangle62 {
+  top: 0px;
+  left: 0px;
+  width: 504px;
+  height: 87px;
+  position: absolute;
+  border-color: transparent;
+}
+.bookmarkspage-text18 {
+  top: 11px;
+  left: 16px;
+  color: rgba(0, 0, 0, 1);
+  width: 166px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.bookmarkspage-bookmark2 {
+  top: 18px;
+  left: 441px;
+  width: 45px;
+  height: 50px;
+  position: absolute;
+}

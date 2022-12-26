@@ -1,0 +1,570 @@
+.repository-container {
+  min-height: 100vh;
+}
+.repository-repository {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.repository-rectangle4 {
+  top: 121px;
+  left: 56px;
+  width: 663px;
+  height: 81px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-rectangle3 {
+  top: 147px;
+  left: 56px;
+  width: 96px;
+  height: 34px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1200px;
+  height: 107px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-rectangle2 {
+  top: 31px;
+  left: 42px;
+  width: 405px;
+  height: 45px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-vector {
+  top: 42px;
+  left: 413px;
+  width: 25px;
+  height: 30px;
+  position: absolute;
+}
+.repository-text {
+  top: 38px;
+  left: 56px;
+  color: rgba(200, 200, 200, 1);
+  width: 230px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-ellipse1 {
+  top: 25px;
+  left: 1131px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-text02 {
+  top: 49px;
+  left: 893px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text04 {
+  top: 45px;
+  left: 1017px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text06 {
+  top: 147px;
+  left: 69px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text08 {
+  top: 147px;
+  left: 187px;
+  color: rgba(0, 0, 0, 1);
+  width: 152px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-line1 {
+  top: 219px;
+  left: 56px;
+  width: 663px;
+  height: 0px;
+  position: absolute;
+}
+.repository-text10 {
+  top: 232px;
+  left: 56px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text12 {
+  top: 233px;
+  left: 270px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text14 {
+  top: 233px;
+  left: 593px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-vector1 {
+  top: 140px;
+  left: 520px;
+  width: 23px;
+  height: 36px;
+  position: absolute;
+}
+.repository-remove {
+  top: 132px;
+  left: 662px;
+  width: 45px;
+  height: 48px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-text16 {
+  top: 130px;
+  left: 882px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text18 {
+  top: 173px;
+  left: 882px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-repository1 {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.repository-rectangle11 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 107px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-rectangle21 {
+  top: 31px;
+  left: 42px;
+  width: 405px;
+  height: 45px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-vector2 {
+  top: 40px;
+  left: 409px;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+.repository-text20 {
+  top: 38px;
+  left: 56px;
+  color: rgba(200, 200, 200, 1);
+  width: 230px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-ellipse11 {
+  top: 26px;
+  right: 48px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-text22 {
+  top: 44px;
+  color: rgba(255, 255, 255, 1);
+  right: 130px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-line11 {
+  top: 219px;
+  left: 56px;
+  width: 663px;
+  height: 0px;
+  position: absolute;
+}
+.repository-text24 {
+  top: 232px;
+  left: 56px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text26 {
+  top: 48px;
+  left: 988px;
+  color: rgb(255, 255, 255);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text27 {
+  top: 233px;
+  left: 270px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text29 {
+  top: 233px;
+  left: 593px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-download {
+  top: 135px;
+  left: 2599px;
+  width: 41px;
+  height: 41px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-frame16 {
+  top: 121px;
+  left: 56px;
+  width: 663px;
+  height: 81px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.repository-rectangle41 {
+  top: 0px;
+  left: 0px;
+  width: 663px;
+  height: 81px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-rectangle31 {
+  top: 26px;
+  left: 0px;
+  width: 96px;
+  height: 34px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-text31 {
+  top: 26px;
+  left: 13px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text33 {
+  top: 26px;
+  left: 131px;
+  color: rgba(0, 0, 0, 1);
+  width: 152px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-vector3 {
+  top: 19px;
+  left: 623px;
+  width: 28px;
+  height: 36px;
+  position: absolute;
+}
+.repository-down-button {
+  top: 30px;
+  left: 72px;
+  width: 21px;
+  height: 26px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-add-file {
+  top: 16px;
+  left: 528px;
+  width: 48px;
+  height: 43px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-remove1 {
+  top: 16px;
+  left: 572px;
+  width: 45px;
+  height: 43px;
+  position: absolute;
+  border-color: transparent;
+}
+.repository-frame17 {
+  top: 137px;
+  right: 150px;
+  width: 305px;
+  height: 72px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+}
+.repository-text35 {
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Bold;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 700;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.repository-text37 {
+  top: 43px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}

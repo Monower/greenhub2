@@ -1,0 +1,210 @@
+.singlefile-container {
+  min-height: 100vh;
+}
+.singlefile-singlefile {
+  width: 100%;
+  height: 1024px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 1);
+}
+.singlefile-container1 {
+  top: 121px;
+  left: 56px;
+  width: 861px;
+  height: 81px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+}
+.singlefile-rectangle4 {
+  top: 0px;
+  left: 0px;
+  width: 862px;
+  height: 81px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-remove {
+  top: 16px;
+  right: 10px;
+  width: 45px;
+  height: 48px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-rectangle3 {
+  top: 147px;
+  left: 56px;
+  width: 96px;
+  height: 34px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-rectangle1 {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 107px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-rectangle2 {
+  top: 31px;
+  left: 42px;
+  width: 405px;
+  height: 45px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-vector {
+  top: 38px;
+  left: 410px;
+  width: 25px;
+  height: 30px;
+  position: absolute;
+}
+.singlefile-text {
+  top: 38px;
+  left: 56px;
+  color: rgba(200, 200, 200, 1);
+  width: 230px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.singlefile-ellipse1 {
+  top: 26px;
+  right: 29px;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+}
+.singlefile-text02 {
+  top: 45px;
+  left: 1018px;
+  color: rgba(255, 255, 255, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.singlefile-text04 {
+  top: 44px;
+  color: rgba(255, 255, 255, 1);
+  right: 121px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: center;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.singlefile-text06 {
+  top: 147px;
+  left: 69px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.singlefile-text08 {
+  top: 147px;
+  left: 187px;
+  color: rgba(0, 0, 0, 1);
+  width: 278px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}
+.singlefile-line1 {
+  top: 219px;
+  left: 56px;
+  width: 1099px;
+  height: 0px;
+  position: absolute;
+}
+.singlefile-down-button {
+  top: 151px;
+  left: 124px;
+  width: 21px;
+  height: 26px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-rectangle5 {
+  top: 248px;
+  left: 56px;
+  width: 864px;
+  height: 57px;
+  position: absolute;
+  border-color: transparent;
+}
+.singlefile-text10 {
+  top: 258px;
+  left: 69px;
+  color: rgba(0, 0, 0, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  align-self: auto;
+  font-style: Regular;
+  text-align: left;
+  font-family: Inter;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  margin-right: 0;
+  margin-bottom: 0;
+  text-decoration: none;
+}

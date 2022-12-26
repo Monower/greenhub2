@@ -1,0 +1,13 @@
+.download-container {
+  min-height: 100vh;
+}
+.download-dummy-container {
+  width: 100%;
+  height: 900px;
+}
+.download-download {
+  width: 41px;
+  height: 41px;
+  position: relative;
+  border-color: transparent;
+}

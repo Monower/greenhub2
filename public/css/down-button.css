@@ -1,0 +1,13 @@
+.down-button-container {
+  min-height: 100vh;
+}
+.down-button-dummy-container {
+  width: 100%;
+  height: 900px;
+}
+.down-button-down-button {
+  width: 21px;
+  height: 26px;
+  position: relative;
+  border-color: transparent;
+}
