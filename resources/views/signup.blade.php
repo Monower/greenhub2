@@ -2,6 +2,7 @@
 <html lang="english">
   <head>
     <title>{{config('app.name')}}</title>
+    <meta property="og:title" content="signup - exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <meta property="twitter:card" content="summary_large_image" />
@@ -37,7 +38,7 @@
   </head>
   <body>
     <div>
-      <link href="{{asset('css/login.css')}}" rel="stylesheet" />
+      <link href="{{asset('css/signup.css')}}" rel="stylesheet" />
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">GreenHub</a>
@@ -52,44 +53,38 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Signup</a>
+                <a class="nav-link" href="#">Login</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      
 
-          <div class="login-login1">
-            <div class="login-frame81">
-              <div class="login-frame71">
-                <div class="login-frame51">
-                  <form action="" method="post">
-                    <span class="login-text25"><span>Login</span></span>
-                    <span class="login-text27">
-                      <span>Please fill in this form to login.</span>
-                    </span>
-                    <span class="login-text29"><input type="email" name="email" placeholder="Enter Email"></span>
-                    <span class="login-text31"><input type="password" name="pass" placeholder="Enter Password"></span>
-                    <div class="login-frame41">
-                      <img
-                        alt="Rectangle82020"
-                        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/9c083c0a-aef2-4229-bb4d-ad85efcf8757/6d6a010a-b637-459f-8be6-b7e4ef433319?org_if_sml=11043"
-                        class="login-rectangle81"
-                      />
-                      <span class="login-text33"><button style="color:antiquewhite" type="submit">Login</button></span>
-                    </div>
-                  </form>
-                  <span class="login-text35">
-                    <span class="login-text36">
-                      Dont have an account? Signup
-                    </span>
-                    <span><a style="text-decoration: underline" href="">here</a></span>
-                  </span>
-                </div>
+      <div class="h-100 d-flex align-items-center justify-content-center p-5">
+        <form action="{{route('user.signup')}}" method="POST">
+            @csrf
+            <fieldset>
+              <legend>Signup</legend>
+              <small class="text-muted">Please fill in this form to create account.</small>
+              <div class="form-group py-2">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name">
               </div>
-            </div>
-          </div>
-        </div>
+              <div class="form-group py-2">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address" name="address">
+              </div>
+              <div class="form-group py-2">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+              </div>
+              <div class="form-group py-2">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+              </div>
+              <div class="form-group py-2">
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Retype Password" name="password_confirmation">
+              </div>
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </fieldset>
+          </form>
       </div>
     </div>
   </body>
