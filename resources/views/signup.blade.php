@@ -68,15 +68,35 @@
               <legend>Signup</legend>
               <small class="text-muted">Please fill in this form to create account.</small>
               <div class="form-group py-2">
+                @error('name')
+                  <div>
+                    <p style="color: red">name is required</p>
+                  </div>
+                @enderror
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" name="name">
               </div>
               <div class="form-group py-2">
+                @error('address')
+                  <div>
+                    <p style="color: red">address is required</p>
+                  </div>
+                @enderror
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Address" name="address">
               </div>
               <div class="form-group py-2">
+                @error('email')
+                  <div>
+                    <p style="color: red">email is required</p>
+                  </div>
+                @enderror
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
               </div>
               <div class="form-group py-2">
+                @error('password')
+                  <div>
+                    <p style="color: red">password is required</p>
+                  </div>
+                @enderror
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
               </div>
               <div class="form-group py-2">
