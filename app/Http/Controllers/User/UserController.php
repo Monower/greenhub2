@@ -11,14 +11,24 @@ use Illuminate\Support\Facades\Validator;
 class UserController extends Controller
 {
     public function dashboard($id=null){
-        if($id==null){
+/*         if($id==null){
             $user = User::find(auth()->user()->id);
             return view('pages.dashboard');
+        }else{
+            $user = User::find($id);
+            return view('pages.dashboard', ['id'=>$user->id]);
+        } */
+
+        if(isset($id)){
+            $user = User::find($id);
+
+            return view('pages.dashboard', ['id'=>$user->id]);
         }
+
+        return view(('pages.dashboard'));
     }
 
     public function info_update(Request $request){
-        // return $request->all();
         $validator = Validator::make($request->all(),[
             'name'=>'required|max:20',
             'address'=>'required',
@@ -51,6 +61,8 @@ class UserController extends Controller
             'bio'=>$request->about,
             'image'=>isset($newFileName) ? $newFileName : null,
             
-        ])
+        ]);
+
+        return back();
     }
 }

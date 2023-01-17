@@ -52,7 +52,7 @@ class AuthController extends Controller
             $name = User::where('email', $request->email)->first();
             $request->session()->put('user',$name->name);
 
-            return redirect(route('user.dashboard'));
+            return redirect(route('user.dashboard', ['id'=>$name->id]));
         }else{
             return redirect()->back()->withErrors(['msg'=>'email or password incorrect']);
         }

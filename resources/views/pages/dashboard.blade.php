@@ -115,18 +115,20 @@
   <div class="container">
     <div class="row pt-3">
       <div class="col">
-        <img src="{{asset('sadaf.jpg')}}" alt="" height="300" width="300" style="border-radius: 50%">
-        <h2 class="pt-3">Monower</h2>
-        <h3>Nonower Sadaf</h3>
-        <small>about myself</small><br><br>
+        @php
+            $user_info = \App\Models\User::find($id);
+        @endphp
+        <img src="{{asset('storage/image/'.$user_info->image)}}" alt="default image" height="300" width="300" style="border-radius: 50%">
+        <h2 class="pt-3">{{$user_info->name}}</h2>
+        <small>{{$user_info->bio}}</small><br><br>
         {{-- <button style="border-radius: 20px" class="btn btn-primary">Edit Profile</button> --}}
         <button type="button" style="border-radius: 20px" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Edit profile
         </button>
         <div class="pt-3 pb-3">
           <i class="bi bi-people-fill"></i> <b>10 following 18 followers</b><br>
-          <i class="bi bi-geo-alt-fill"></i> <b>My address</b><br>
-          <i class="bi bi-envelope-fill"></i> <b>example@gmail.com</b>
+          <i class="bi bi-geo-alt-fill"></i> <b>{{$user_info->address}}</b><br>
+          <i class="bi bi-envelope-fill"></i> <b>{{$user_info->email}}</b>
         </div>
       </div>
       <div style="padding-left: 200px" class="col">
@@ -146,15 +148,15 @@
         <div class="modal-body">
             <form action="{{route('user.info_update')}}" method="post">
               @csrf
-{{--               <div class="image-area mt-4">
-                <img height="200px" width="300px"  id="imageResult" src="{{asset('storage/image/profile/'.$user_profile_image)}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block" onerror="this.src='{{asset('storage/image/default/default-image.png')}}'">
-              </div> --}}
+              <div class="image-area">
+                <img height="200px" width="300px"  id="imageResult" src="{{asset('storage/image/'.$user_info->image)}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
+              </div>
 
               <small>*select an image to change the profile picture*</small>
               <input class="form-control" type="file" name="image" id="image" oninput="imageResult.src=window.URL.createObjectURL(this.files[0])" required><br>
-              <input type="text" placeholder="Name" name="name"><br>
-              <textarea placeholder="Describe yourself here..." name="about" id="" cols="30" rows="10"></textarea><br>
-              <input type="text" placeholder="address" name="address"><br>
+              <input type="text" name="name" value="{{$user_info->name}}"><br>
+              <textarea  name="about" id="" cols="30" rows="10">{{$user_info->bio}}</textarea><br>
+              <input type="text" name="address" value="{{$user_info->address}}"><br>
               <button style="border-radius: 50px" class="btn btn-sm btn-primary" type="submit">Save Changes</button>
             </form>
         </div>
