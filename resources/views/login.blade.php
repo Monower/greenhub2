@@ -52,7 +52,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Signup</a>
+                <a class="nav-link" href="{{route('signup')}}">Signup</a>
               </li>
             </ul>
           </div>
@@ -63,13 +63,20 @@
             <div class="login-frame81">
               <div class="login-frame71">
                 <div class="login-frame51">
-                  <form action="" method="post">
+                  <form action="{{route('user_login')}}" method="POST">
+                    @csrf
                     <span class="login-text25"><span>Login</span></span>
                     <span class="login-text27">
                       <span>Please fill in this form to login.</span>
                     </span>
+                    @if ($errors->any())
+                      @foreach ($errors->all() as $error)
+                          <p class="text-danger">{{$error}}</p>
+                      @endforeach
+                        
+                    @endif
                     <span class="login-text29"><input type="email" name="email" placeholder="Enter Email"></span>
-                    <span class="login-text31"><input type="password" name="pass" placeholder="Enter Password"></span>
+                    <span class="login-text31"><input type="password" name="password" placeholder="Enter Password"></span>
                     <div class="login-frame41">
                       <img
                         alt="Rectangle82020"
@@ -83,7 +90,7 @@
                     <span class="login-text36">
                       Dont have an account? Signup
                     </span>
-                    <span><a style="text-decoration: underline" href="">here</a></span>
+                    <span><a style="text-decoration: underline" href="{{route('signup')}}">here</a></span>
                   </span>
                 </div>
               </div>
