@@ -146,7 +146,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form action="{{route('user.info_update')}}" method="post">
+            <form action="{{route('user.info_update')}}" method="post" enctype="multipart/form-data">
               @csrf
               <div class="image-area">
                 <img height="200px" width="300px"  id="imageResult" src="{{asset('storage/image/'.$user_info->image)}}" alt="" class="img-fluid rounded shadow-sm mx-auto d-block">
@@ -154,7 +154,7 @@
 
               <small>*select an image to change the profile picture*</small>
               <input class="form-control" type="file" name="image" id="image" oninput="imageResult.src=window.URL.createObjectURL(this.files[0])" required><br>
-              <input type="text" name="name" value="{{$user_info->name}}"><br>
+              <input type="text" name="name" value="{{$user_info->name}}" required><br>
               <textarea  name="about" id="" cols="30" rows="10">{{$user_info->bio}}</textarea><br>
               <input type="text" name="address" value="{{$user_info->address}}"><br>
               <button style="border-radius: 50px" class="btn btn-sm btn-primary" type="submit">Save Changes</button>

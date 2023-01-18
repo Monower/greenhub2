@@ -32,7 +32,7 @@ class UserController extends Controller
         $validator = Validator::make($request->all(),[
             'name'=>'required|max:20',
             'address'=>'required',
-            'image'=>'image|size:10240',
+            'image'=>'max:10240',
             'about'=>'max:200'
         ]);
 
@@ -40,19 +40,19 @@ class UserController extends Controller
             return back()->withInput()->withErrors($validator->errors());
         }
 
-        if(!Storage::disk('public')->exists('image/profile')){
-            Storage::disk('public')->makeDirectory('image/profile');
+        if(!Storage::disk('public')->exists('image')){
+            Storage::disk('public')->makeDirectory('image');
         }
 
         $user = User::find(auth()->user()->id);
 
         if(isset($request->image)){
-            if(Storage::disk('public')->exists('image/profile/'.$user->image)){
-                Storage::delete('image/profile/'.$user->image);
-            }
+/*             if(Storage::disk('public')->exists('image/'.$user->image)){
+                Storage::delete('image/'.$user->image);
+            } */
 
-            $newFileName= auth()->user()->name.".".$request->image->extension();
-            Storage::disk('public')->put('image/profile/'.$newFileName, file_get_contents($request->file('image')));
+            $newFileName= auth()->user()->id.".".$request->image->extension();
+            Storage::disk('public')->put('image/'.$newFileName, file_get_contents($request->file('image')));
         }
 
         $user->update([
