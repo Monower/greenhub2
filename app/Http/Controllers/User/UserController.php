@@ -51,7 +51,7 @@ class UserController extends Controller
                 Storage::delete('image/'.$user->image);
             } */
 
-            $newFileName= auth()->user()->id.".".$request->image->extension();
+            $newFileName= auth()->user()->email.".".$request->image->extension();
             Storage::disk('public')->put('image/'.$newFileName, file_get_contents($request->file('image')));
         }
 
