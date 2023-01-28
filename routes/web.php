@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\User\AuthController;
+use App\Http\Controllers\User\RepositoryController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +31,6 @@ Route::name('user.')->prefix('user')->middleware('auth')->group(function(){
     Route::get('/dashboard/{id?}', [UserController::class,'dashboard'])->name('dashboard');
     Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     Route::post('info-update',[UserController::class, 'info_update'])->name('info_update');
+    Route::post('create-repository', [RepositoryController::class, 'create_repository'])->name('create_repository');
+    Route::get('repository/{repository_id}/{user_id}', [RepositoryController::class, 'show_repository'])->name('show-repository');
 });

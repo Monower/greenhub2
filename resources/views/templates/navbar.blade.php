@@ -14,10 +14,10 @@
         
         <ul class="navbar-nav me-auto">
             <li class="nav-item dropdown">
-                @php
+ {{--                @php
                   $user_info = \App\Models\User::find($id);
-                @endphp
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img src="{{asset('storage/image/'.$user_info->image)}}" alt="" height="30" width="30" style="border-radius: 50%"></a>
+                @endphp --}}
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><img {{-- src="{{asset('storage/image/'.$user_info->image)}}" --}} alt="" height="30" width="30" style="border-radius: 50%"></a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{route('user.dashboard', ['id'=>auth()->user()->id])}}">Profile</a>
                     <a class="dropdown-item" href="{{-- {{route('user.following')}} --}}">Following</a>

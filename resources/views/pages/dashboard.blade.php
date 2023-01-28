@@ -66,30 +66,30 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <form action="{{-- {{route('user.info_update')}} --}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('user.create_repository')}}" method="post">
               @csrf
               <div class="form-group">
                 <label for="repository_name" class="form-label mt-4">Name <span style="color: red" title="required">*</span></label>
-                <input type="text" class="form-control" id="repository_name" aria-describedby="emailHelp" placeholder="Name of the repository" required>
+                <input type="text" class="form-control" id="repository_name" name="repository_name" aria-describedby="emailHelp" placeholder="Name of the repository" required>
               </div>
               <div class="form-group">
                 <label for="repository_description" class="form-label mt-4">Description <small class="form-text text-muted">(optional)</small></label>
-                <input type="text" class="form-control" id="repository_description" aria-describedby="emailHelp" placeholder="Description of the repository">
+                <input type="text" class="form-control" id="repository_description" name="repository_description" aria-describedby="emailHelp" placeholder="Description of the repository">
               </div>
 
               <fieldset class="form-group">
                 <div class="form-check mt-3">
-                  <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                  <input class="form-check-input" type="radio" name="acess_modifier" id="optionsRadios1" value="0" checked="">
                   <i class="bi bi-book"></i> Public<br>
                   <small class="form-text text-muted">Anyone can see the repository.</small>
                 </div>
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                  <input class="form-check-input" type="radio" name="acess_modifier" id="optionsRadios2" value="1">
                   <i class="bi bi-journal"></i> Private <br>
                   <small class="form-text text-muted">You chose who can see this repository.</small>
                 </div>
-              </fieldset>
-              <button style="border-radius: 50px" class="btn btn-sm btn-primary" type="submit">Save Changes</button>
+              </fieldset><br>
+              <button style="border-radius: 50px" class="btn btn-sm btn-success" type="submit">Create Repository</button>
             </form>
         </div>
         <div class="modal-footer">
