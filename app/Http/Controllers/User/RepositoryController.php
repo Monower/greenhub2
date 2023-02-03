@@ -43,4 +43,9 @@ class RepositoryController extends Controller
 
         return view('pages.repository', ['repository'=>$repository, /* 'file_name'=>$file_name, */ 'user_id'=>$user_id]);
     }
+
+    public function delete_repository(Request $request){
+        Repository::where(['id'=>$request->repository_id, 'user_id'=>auth()->user()->id])->delete();
+        return redirect(route('user.dashboard', ['id'=>auth()->user()->id]));
+    }
 }

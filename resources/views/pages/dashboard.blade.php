@@ -23,7 +23,26 @@
       </div>
       <div style="padding-left: 200px" class="col">
           <h2>Repositories   <a href="#" title="Create new repository"><i title="create repository" type="button" data-bs-toggle="modal" data-bs-target="#create_repository" class="bi bi-file-earmark-plus-fill"></i></a></h2> 
+          <hr style="height: 30px">
+          @foreach ($repository as $item)
+              <div>
+                <h3><a href="{{route('user.show-repository', ['repository_id'=>$item->id, 'user_id'=>$id])}}">{{$item->name}}</a></h3>
+
+                @php
+                    if($item->access_modifier == 0){
+                      $access_modifier = "public";
+                    }else{
+                      $access_modifier = "private";
+                    }
+                @endphp
+                <small style="background-color: gray; border-style: solid; border-width: 1px; border-radius: 10px; padding: 3px; color: white">{{$access_modifier}}</small>
+                <p>{{$item->description}}</p>
+                <p>updated on {{$item->updated_at}}</p>
+                <hr>
+              </div>
+          @endforeach
       </div>
+
     </div>
   </div>
 

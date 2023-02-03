@@ -1,7 +1,6 @@
 @include('templates.header')
 @include('templates.navbar')
 <script src="https://cdn.tailwindcss.com"></script>
-
 <div class="container grid grid-cols-5 gap-4 pt-3 ">
     <div class="grid grid-cols-4 justify-items-start rounded col-span-3">
         <div class="pl-1">
@@ -11,7 +10,7 @@
             </select>
         </div>
         <div class="col-span-2">
-            <h3 class="font-bold">Repository_name</h3>
+            <h3 class="font-bold">{{$repository->name}}</h3>
         </div>
         <div class="grid grid-cols-3 gap-4">
             <i title="add new file" class="bi bi-file-earmark-plus-fill"></i>
@@ -22,10 +21,10 @@
     </div>
     <div class="pl-12">
         <h2 class="font-bold">Description</h2>
-        <small>demo  description</small>
+        <small>{{$repository->description}}</small>
     </div>
     <div class="flex justify-end">
-        <i title="delete this repository" class="bi bi-trash-fill" style="color: red"></i>
+        <button type="button" data-toggle="modal" data-target="#delete_repository"><i title="delete this repository" class="bi bi-trash-fill" style="color: red"></i></button>
     </div>
 </div>
 
@@ -65,7 +64,32 @@
 
 
 
+<!-- Modal -->
+<div class="modal fade" id="delete_repository" tabindex="-1" role="dialog" aria-labelledby="delete_repositoryLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="delete_repositoryLabel">Delete this repository?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{route('user.delete-repository')}}" method="post">
+                @csrf
+                <input type="hidden" name="repository_id" value="{{$repository->id}}">
+                <div class="grid grid-cols-2 justify-items-center">
+                    <button type="submit" class="bg-red-600 text-slate-50 border rounded w-[150px] hover:bg-red-700">yes</button>
+                    <button type="button" class="bg-green-500 text-slate-50 border rounded w-[150px] hover:bg-green-600" data-dismiss="modal">no</button>
+                </div>
 
+            </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

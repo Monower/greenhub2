@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
+use App\Models\Repository;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -21,8 +22,9 @@ class UserController extends Controller
 
         if(isset($id)){
             $user = User::find($id);
+            $repository = Repository::where('user_id', $user->id)->latest()->get();
 
-            return view('pages.dashboard', ['id'=>$user->id]);
+            return view('pages.dashboard', ['id'=>$user->id, 'repository'=>$repository]);
         }
 
         return view(('pages.dashboard'));

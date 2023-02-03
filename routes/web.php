@@ -33,4 +33,5 @@ Route::name('user.')->prefix('user')->middleware('auth')->group(function(){
     Route::post('info-update',[UserController::class, 'info_update'])->name('info_update');
     Route::post('create-repository', [RepositoryController::class, 'create_repository'])->name('create_repository');
     Route::get('repository/{repository_id}/{user_id}', [RepositoryController::class, 'show_repository'])->name('show-repository');
+    Route::post('delete-repository', [RepositoryController::class, 'delete_repository'])->name('delete-repository');
 });
