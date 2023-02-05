@@ -1,12 +1,17 @@
 @include('templates.header')
 @include('templates.navbar')
 <script src="https://cdn.tailwindcss.com"></script>
+
+{{-- {{dd($repository->branches[0]->name)}} --}}
 <div class="container grid grid-cols-5 gap-4 pt-3 ">
     <div class="grid grid-cols-4 justify-items-start rounded col-span-3">
         <div class="pl-1">
+
             <select class="bg-slate-400 rounded text-center" name="" id="">
-                <option value="">main</option>
-                <option  value="">+</option>
+                @foreach ($repository->branches as $branch)
+                    <option value="">{{ $branch->name }}</option>
+                @endforeach
+                <option type="button" data-toggle="modal" data-target="#create_branch" value="">+</option>
             </select>
         </div>
         <div class="col-span-2">
@@ -64,7 +69,37 @@
 
 
 
-<!-- Modal -->
+<!-- delete repository modal -->
+<div class="modal fade" id="create_branch" tabindex="-1" role="dialog" aria-labelledby="create_branchLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-slate-500">
+        <div class="modal-header">
+          <h5 class="modal-title text-slate-50" id="create_branchLabel">Create new branch:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{route('user.create-branch')}}" method="post">
+                @csrf
+                <input type="hidden" name="repository_id" value="{{$repository->id}}">
+                <div>
+                    <div>
+                        <h3 class="inline text-slate-50">Name:</h3> <input class="border border-slate-900 bg-slate-400 rounded-md text-slate-50 ml-3" type="text" name="name" required>
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="bg-green-500 hover:bg-green-400 text-slate-50 rounded-md px-3 py-1" type="submit">create branch</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 <div class="modal fade" id="delete_repository" tabindex="-1" role="dialog" aria-labelledby="delete_repositoryLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

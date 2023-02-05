@@ -15,4 +15,8 @@ class Repository extends Model
           'access_modifier',
            'user_id'
     ];
+
+    public function branches(){
+        return $this->hasMany(Branch::class);
+    }
 }
