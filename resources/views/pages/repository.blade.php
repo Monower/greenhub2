@@ -16,6 +16,7 @@
         <div class="grid grid-cols-3 gap-4">
             <span class="text-[#158cba]"><i type="button" data-toggle="modal" data-target="#addFile" title="add new file" class="bi bi-file-earmark-plus-fill"></i></span>
             <span class="text-[#158cba]"><i title="save this repository" class="bi bi-bookmark-fill"></i></span>
+            <span class="text-[#158cba]"><i type="button" title="add contributor" class="bi bi-person-fill-add"></i></span>
             
             
         </div>
@@ -29,36 +30,50 @@
     </div>
 </div>
 <hr>
-
-
 <div class="container grid grid-cols-5 pt-3">
     <div class=" col-span-4">
-        <div class="flex justify-around">
-            <p>hello.py</p>
-            <p>commit message</p>
-            <p>3 days a go</p>
-        </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">File Name</th>
+            <th scope="col">Commit Message</th>
+            <th scope="co">Commited By</th>
+            <th scope="col">Updated At</th>
+          </tr>
+        </thead>
+        <tbody>
+          @php
+              $si=1;
+          @endphp
 
+          @foreach ($file as $item)
+            <tr>
+              <th scope="row">{{$si}}</th>
+              <td><a href="">{{$item->name}}</a></td>
+              <td>{{$item->commit_message}}</td>
+              <td><a href="">{{$item->user->name}}</a></td>
+              <td>{{$item->updated_at}}</td>
+            </tr>
+
+            @php
+                $si+=1;
+            @endphp
+          @endforeach
+
+        </tbody>
+      </table>
     </div>
     <div>
         <h2 class="font-bold">Contributors</h2>
+
         <div class="flex flex-col gap-y-3">
-            <div class="flex flex-row">
-                <img src="{{asset('sadaf.jpg')}}" alt="profile image" height="35" width="35" style="border-radius: 50%">
-                <a href="">demo contributor</a>
-            </div>
-            <div class="flex flex-row">
-                <img src="{{asset('sadaf.jpg')}}" alt="profile image" height="35" width="35" style="border-radius: 50%">
-                <a href="">demo contributor</a>
-            </div>
-            <div class="flex flex-row">
-                <img src="{{asset('sadaf.jpg')}}" alt="profile image" height="35" width="35" style="border-radius: 50%">
-                <a href="">demo contributor</a>
-            </div>
-            <div class="flex flex-row">
-                <img src="{{asset('sadaf.jpg')}}" alt="profile image" height="35" width="35" style="border-radius: 50%">
-                <a href="">demo contributor</a>
-            </div>
+            @foreach ($contributor as $item)
+              <div class="flex flex-row">
+                <img src="{{asset('storage/image/'.$item->contributor->image)}}" alt="profile image" class="inline w-[35px] h-[35px] rounded-full">
+                <a class="pt-1 pl-1" href="">{{$item->contributor->name}}</a>
+              </div>
+            @endforeach
         </div>
     </div>
 </div>

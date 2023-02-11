@@ -10,4 +10,8 @@ class File extends Model
     use HasFactory;
 
     protected $fillable= ['name','repository_id','commit_message','user_id'];
+
+    public function user(){
+        return $this->belongsTo(User::class);
+    }
 }

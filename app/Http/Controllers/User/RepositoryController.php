@@ -5,6 +5,7 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use App\Models\Branch;
 use App\Models\Contributor;
+use App\Models\File;
 use App\Models\Repository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -45,10 +46,11 @@ class RepositoryController extends Controller
     }
 
     public function show_repository($repository_id, $user_id){
-        $repository = Repository::with('branches')->where(['id'=>$repository_id, 'user_id'=>$user_id])->first();
-        // $file_name
+        $repository = Repository::where(['id'=>$repository_id, 'user_id'=>$user_id])->first();
+        $file = File::with('user')->where('repository_id',$repository_id)->get();
+        $contributor = Contributor::with('contributor')->where('repository_id',$repository_id)->get();
 
-        return view('pages.repository', ['repository'=>$repository, /* 'file_name'=>$file_name, */ 'user_id'=>$user_id]);
+        return view('pages.repository', ['repository'=>$repository, 'file'=>$file, 'user_id'=>$user_id, 'contributor'=>$contributor]);
     }
 
     public function delete_repository(Request $request){

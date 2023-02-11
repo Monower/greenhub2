@@ -10,4 +10,8 @@ class Contributor extends Model
     use HasFactory;
 
     protected $fillable = ['user_id', 'repository_id'];
+
+    public function contributor(){
+        return $this->belongsTo(User::class,'user_id');
+    }
 }
