@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\User\AuthController;
 use App\Http\Controllers\User\BranchController;
+use App\Http\Controllers\User\FileController;
 use App\Http\Controllers\User\RepositoryController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -35,5 +36,6 @@ Route::name('user.')->prefix('user')->middleware('auth')->group(function(){
     Route::post('create-repository', [RepositoryController::class, 'create_repository'])->name('create_repository');
     Route::get('repository/{repository_id}/{user_id}', [RepositoryController::class, 'show_repository'])->name('show-repository');
     Route::post('delete-repository', [RepositoryController::class, 'delete_repository'])->name('delete-repository');
-    Route::post('create-branch', [BranchController::class, 'create_branch'])->name('create-branch');
+/*     Route::post('create-branch', [BranchController::class, 'create_branch'])->name('create-branch'); */
+    Route::post('add-file', [FileController::class, 'add_file'])->name('add-file');
 });

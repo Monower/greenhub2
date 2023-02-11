@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Branch;
+use App\Models\Contributor;
 use App\Models\Repository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -35,11 +36,8 @@ class RepositoryController extends Controller
             'user_id'=>auth()->user()->id
         ]);
 
-
-        Storage::disk('public')->makeDirectory('repositories/'.auth()->user()->email.'/'.$request->repository_name.'/main');
-
-        Branch::create([
-            'name'=>'main',
+        Contributor::create([
+            'user_id'=>auth()->user()->id,
             'repository_id'=>$repository->id
         ]);
 

@@ -2,25 +2,21 @@
 @include('templates.navbar')
 <script src="https://cdn.tailwindcss.com"></script>
 
-{{-- {{dd($repository->branches[0]->name)}} --}}
+<style>
+  *{
+    font-family: monospace
+  }
+</style>
+
 <div class="container grid grid-cols-5 gap-4 pt-3 ">
     <div class="grid grid-cols-4 justify-items-start rounded col-span-3">
-        <div class="pl-1">
-
-            <select class="bg-slate-400 rounded text-center" name="" id="">
-                @foreach ($repository->branches as $branch)
-                    <option value="">{{ $branch->name }}</option>
-                @endforeach
-                <option type="button" data-toggle="modal" data-target="#create_branch" value="">+</option>
-            </select>
-        </div>
         <div class="col-span-2">
             <h3 class="font-bold">{{$repository->name}}</h3>
         </div>
         <div class="grid grid-cols-3 gap-4">
-            <i title="add new file" class="bi bi-file-earmark-plus-fill"></i>
-            <i title="delete this branch" class="bi bi-trash-fill"></i>
-            <i title="save this repository" class="bi bi-bookmark-fill"></i>
+            <span class="text-[#158cba]"><i type="button" data-toggle="modal" data-target="#addFile" title="add new file" class="bi bi-file-earmark-plus-fill"></i></span>
+            <span class="text-[#158cba]"><i title="save this repository" class="bi bi-bookmark-fill"></i></span>
+            
             
         </div>
     </div>
@@ -32,6 +28,7 @@
         <button type="button" data-toggle="modal" data-target="#delete_repository"><i title="delete this repository" class="bi bi-trash-fill" style="color: red"></i></button>
     </div>
 </div>
+<hr>
 
 
 <div class="container grid grid-cols-5 pt-3">
@@ -69,37 +66,8 @@
 
 
 
-<!-- delete repository modal -->
-<div class="modal fade" id="create_branch" tabindex="-1" role="dialog" aria-labelledby="create_branchLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content bg-slate-500">
-        <div class="modal-header">
-          <h5 class="modal-title text-slate-50" id="create_branchLabel">Create new branch:</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-            <form action="{{route('user.create-branch')}}" method="post">
-                @csrf
-                <input type="hidden" name="repository_id" value="{{$repository->id}}">
-                <div>
-                    <div>
-                        <h3 class="inline text-slate-50">Name:</h3> <input class="border border-slate-900 bg-slate-400 rounded-md text-slate-50 ml-3" type="text" name="name" required>
-                    </div>
-                    <div class="flex justify-end">
-                        <button class="bg-green-500 hover:bg-green-400 text-slate-50 rounded-md px-3 py-1" type="submit">create branch</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-        </div>
-      </div>
-    </div>
-  </div>
 
-
+  <!-- delete repository modal -->
 <div class="modal fade" id="delete_repository" tabindex="-1" role="dialog" aria-labelledby="delete_repositoryLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -126,6 +94,37 @@
     </div>
   </div>
 
+  {{-- add file modal --}}
+  <div class="modal fade" id="addFile" tabindex="-1" role="dialog" aria-labelledby="addFileLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content bg-slate-900">
+        <div class="modal-header">
+          <h5 class="modal-title text-slate-50 font-mono" id="addFileLabel">Add new File:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="text-[#FFFFFF]" aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form action="{{route('user.add-file')}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="repository_id" value="{{$repository->id}}">
+
+                <div class="grid grid-cols-1 gap-4 pb-2">
+                  <div class="flex">
+                    <h3 class="text-[#FFFFFF] mt-1 pr-2">Select File:</h3>
+                    <input class="text-[#FFFFFF]" type="file" name="file" multiple required>
+                  </div>
+                  <div>
+                    <h3 class="text-[#FFFFFF] pb-2">Add commit message:</h3>
+                    <textarea class="rounded" name="commit_message" id="" cols="40" rows="5" placeholder="Add detailed commit message..."></textarea>
+                  </div>
+                </div>
+                <button class="bg-green-500 hover:bg-green-400 text-slate-50 rounded-md px-3 py-1" type="submit">Add File</button>
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
