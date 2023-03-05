@@ -34,4 +34,8 @@ class FileController extends Controller
             return back();
         }
     }
+
+    public function show_file(){
+        return view('pages.bookmarks');
+    }
 }

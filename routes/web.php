@@ -38,4 +38,5 @@ Route::name('user.')->prefix('user')->middleware('auth')->group(function(){
     Route::post('delete-repository', [RepositoryController::class, 'delete_repository'])->name('delete-repository');
 /*     Route::post('create-branch', [BranchController::class, 'create_branch'])->name('create-branch'); */
     Route::post('add-file', [FileController::class, 'add_file'])->name('add-file');
+    Route::get('show-file', [FileController::class, 'show_file'])->name('show-file');
 });
