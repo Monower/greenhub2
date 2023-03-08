@@ -5,40 +5,13 @@
     <meta property="og:title" content="signup - exported project" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="{{asset('bootstrap.min.css')}}">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
 
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
   </head>
   <body>
-    <div>
-      <link href="{{asset('css/signup.css')}}" rel="stylesheet" />
+{{--     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">GreenHub</a>
@@ -106,6 +79,56 @@
             </fieldset>
           </form>
       </div>
-    </div>
+    </div> --}}
+
+
+
+    <div class="container mx-auto flex justify-center pt-[100px]">
+      <div class="bg-slate-300 w-[33%] p-5 rounded-2xl">
+          <form class="flex flex-col space-y-5" action="{{route('user.signup')}}" method="post">
+              @csrf
+              <div>
+                  <h3 class="text-[26px] font-bold text-slate-700">Signup</h3>
+                  <small class="text-[12px] text-slate-700">Please fill in this form to create an account.</small>
+              </div>
+
+              @error('name')
+                <div>
+                  <p style="color: red">name is required</p>
+                </div>
+              @enderror
+              <input name="name" class="h-[35px] w-[85%] px-3 rounded-full focus:outline-none" type="text" placeholder="Enter Name" autofocus>
+              
+              @error('email')
+                <div>
+                  <p style="color: red">email is required</p>
+                </div>
+              @enderror
+              <input name="email" class="h-[35px] w-[85%] px-3 rounded-full focus:outline-none" type="email" placeholder="Enter Email">
+
+              @error('address')
+                <div>
+                  <p style="color: red">address is required</p>
+                </div>
+              @enderror
+              <input name="address" class="h-[35px] w-[85%] px-3 rounded-full focus:outline-none" type="text" placeholder="Enter Address">
+
+              @error('password')
+                <div>
+                  <p style="color: red">password is required</p>
+                </div>
+              @enderror
+              <input name="password" class="h-[35px] w-[85%] px-3 rounded-full focus:outline-none" type="password" placeholder="Enter Password">
+              <input name="password_confirmation" class="h-[35px] w-[85%] px-3 rounded-full focus:outline-none" type="password" placeholder="Re-type Password">
+
+              <div>
+                  <button type="submit" class="bg-sky-400 hover:text-sky-400 hover:bg-slate-50 w-[25%] py-1 rounded-full text-slate-50 font-bold">SignUp</button>
+                  <p class="text-[14px] text-slate-700">Already got an account? Login <a class="text-sky-600 hover:underline" href="{{route('login')}}">here</a></p>
+              </div>
+          </form>
+      </div>
+  </div>
+
+
   </body>
 </html>

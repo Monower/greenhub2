@@ -4,100 +4,33 @@
     <title>{{config('app.name')}}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
-    <meta property="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="{{asset('bootstrap.min.css')}}">
-
-    <style data-tag="reset-style-sheet">
-      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
-    </style>
-    <style data-tag="default-style-sheet">
-      html {
-        font-family: Inter;
-        font-size: 16px;
-      }
-
-      body {
-        font-weight: 400;
-        font-style:normal;
-        text-decoration: none;
-        text-transform: none;
-        letter-spacing: normal;
-        line-height: 1.15;
-        color: var(--dl-color-gray-black);
-        background-color: var(--dl-color-gray-white);
-
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
-      data-tag="font"
-    />
-    <link rel="stylesheet" href="{{asset('css/style.css')}}" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body>
-    <div>
-      <link href="{{asset('css/login.css')}}" rel="stylesheet" />
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">GreenHub</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarColor01">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="#">About
-                  <span class="visually-hidden">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{{route('signup')}}">Signup</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+  <body class="bg-slate-50 font-roboto">
 
-          <div class="login-login1">
-            <div class="login-frame81">
-              <div class="login-frame71">
-                <div class="login-frame51">
-                  <form action="{{route('user_login')}}" method="POST">
-                    @csrf
-                    <span class="login-text25"><span>Login</span></span>
-                    <span class="login-text27">
-                      <span>Please fill in this form to login.</span>
-                    </span>
-                    @if ($errors->any())
-                      @foreach ($errors->all() as $error)
-                          <p class="text-danger">{{$error}}</p>
-                      @endforeach
-                        
-                    @endif
-                    <span class="login-text29"><input type="email" name="email" placeholder="Enter Email"></span>
-                    <span class="login-text31"><input type="password" name="password" placeholder="Enter Password"></span>
-                    <div class="login-frame41">
-                      <img
-                        alt="Rectangle82020"
-                        src="https://aheioqhobo.cloudimg.io/v7/_playground-bucket-v2.teleporthq.io_/9c083c0a-aef2-4229-bb4d-ad85efcf8757/6d6a010a-b637-459f-8be6-b7e4ef433319?org_if_sml=11043"
-                        class="login-rectangle81"
-                      />
-                      <span class="login-text33"><button style="color:antiquewhite" type="submit">Login</button></span>
-                    </div>
-                  </form>
-                  <span class="login-text35">
-                    <span class="login-text36">
-                      Dont have an account? Signup
-                    </span>
-                    <span><a style="text-decoration: underline" href="{{route('signup')}}">here</a></span>
-                  </span>
-                </div>
+    <div class="container mx-auto flex justify-center items-center">
+      <div class="bg-slate-300 w-[400px] mt-[100px] rounded-2xl">
+          <form class="flex flex-col m-5 space-y-5" action="{{route('user_login')}}" method="post">
+              @csrf
+              <div>
+                  <h3 class="text-[26px] font-bold text-slate-700">Login</h3>
+                  <small class="text-[12px] text-slate-700">Please fill in this form to login.</small>
               </div>
-            </div>
-          </div>
-        </div>
+              @if ($errors->any())
+                @foreach ($errors->all() as $error)
+                    <p class="text-red-400">{{$error}}</p>
+                @endforeach
+              @endif
+              <input class="w-[80%] h-[35px] px-3 rounded-full focus:outline-none" type="email" placeholder="Email" name="email" autofocus>
+              <input class="w-[80%] h-[35px] px-3 rounded-full focus:outline-none" type="password" placeholder="Password" name="password">
+              <div>
+                  <button class="bg-sky-400 hover:text-sky-400 hover:bg-slate-50 w-[25%] py-1 rounded-full text-slate-50 font-bold">Login</button>
+                  <p class="text-[14px] text-slate-700">Dont have an account? Signup <a class="text-sky-600 hover:underline" href="{{route('signup')}}">here</a></p>
+              </div>
+          </form>
       </div>
     </div>
+    
   </body>
 </html>
